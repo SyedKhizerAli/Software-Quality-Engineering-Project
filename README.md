@@ -1,4 +1,4 @@
-# Hey! Welcome to our SQE-project
+# Hey! Welcome to my SQE-project
 
 Automating newly made test scenraios using pycharm
 
@@ -64,9 +64,6 @@ Details:
   Read documentation for sake of undertanding
   Solved Behave package problems
   Found multiple simple UI test cases for Admin Link : https://github.com/metabase/metabase/blob/master/frontend/test/metabase/scenarios/admin/people/group-managers.cy.spec.js
-  Found multilple unit test cases Link : https://github.com/metabase/metabase/tree/master/frontend/test/metabase
+ 
+ Found multilple unit test cases Link : https://github.com/metabase/metabase/tree/master/frontend/test/metabase
   
-  
-  Sir's Reviews:
-  1- fix api assertions
-  2- fix xpaths
