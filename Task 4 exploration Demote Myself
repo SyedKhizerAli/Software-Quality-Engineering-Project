@@ -1,0 +1,66 @@
+Exploring Link:
+https://github.com/metabase/metabase/blob/master/frontend/test/metabase/scenarios/admin/people/group-managers.cy.spec.js
+
+import {
+  restore,
+  modal,
+  popover,
+  describeEE,
+  getFullName,
+} from "__support__/e2e/helpers";
+import { USERS } from "__support__/e2e/cypress_data";
+
+const { normal, nocollection } = USERS;
+
+const noCollectionUserName = getFullName(nocollection);
+const normalUserName = getFullName(normal);
+
+describeEE("scenarios > admin > people", () => {
+  beforeEach(() => {
+    restore();
+    cy.signInAsAdmin();
+    cy.visit("/admin/people");
+    cy.findByText(normalUserName)
+      .closest("tr")
+      .findByText("2 other groups")
+      .click();
+
+    cy.findAllByTestId("user-type-toggle").click({ multiple: true });
+
+    cy.signInAsNormalUser();
+    cy.visit("/");
+    cy.icon("gear").click();
+    cy.findByText("Admin settings").click();
+  });   
+   
+   
+   // Demote myself from being manager
+      popover().within(() => {
+        cy.icon("arrow_down").eq(0).click();
+      });
+      confirmLosingAbilityToManageGroup();
+      
+      
+      // Redirected to the home page
+      cy.url().should("match", /\/$/);
+      
+      
+      function confirmLosingAbilityToManageGroup() {
+  modal().within(() => {
+    cy.findByText(
+      "You will not be able to manage users of this group anymore.",
+    );
+    cy.button("Confirm").click();
+  });
+}
+---------------------------------------------------------------------------------------------------------
+                              I will be explaining a UI Test Case:
+                              
+Demote User(current) from being manager
+
+FirstUser(current) get open the drop down button.//cy.icon("arrow_down").eq(0).click();
+then we click the first row which is to demote User(current) from the manager to member
+then User(current) get a confirmation message
+displaying User(current) wont get to manage users of this gr //cy.button("Confirm").click();oup anymore
+then after clicking confirm User(current) user is demoted
+and is redirected to the homepage //cy.url().should("match", /\/$/);

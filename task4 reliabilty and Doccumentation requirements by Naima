@@ -1,0 +1,25 @@
+Reliability Requirements:
+1.	The System shall show errors instead of crashing when invalid input is entered.
+2.	The System shall be deployed on the cloud
+3.	The System must back up the data in the cloud every day to prevent any data loss.
+4.	The new data must be saved in the local storage after 5 seconds of every edit.
+5.	The System must load completely after 10 seconds of starting time.
+6.	The System should encrypt the personal data of every User to prevent privacy invasion.
+7.	The System shall send an alert to user of the wrong password is entered 5 times.
+8.	The System must give a 12-hour notification prior to the appointment.
+9.	The System must alert on the last 2 leaves that the limit is about to be reached.
+10.	The System must block out the user banned by the admin
+
+Documentation Requirements:
+1.	The application has a user manual for new customers.
+2.	The all the naming conventions should be followed.
+3.	The code should follow all the standard coding practices.
+4.	The code should be well documented in terms of comments.
+5.	The whole application should be runnable before uploading on GitHub.
+6.	Meeting notes should be written and provided to everyone and added in the official document
+7.	All the statistics and results should be added in the documents by both developer and testing teams.
+8.	Any recordings of the meeting with the instructor must be started by the consent of the instructor.
+9.	All versions must be saved and taken track of and be functional so it can be recovered.
+10.	Any changes after completion must be requested by an email and done under the instructor’s supervision.
+
+

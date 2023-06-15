@@ -1,0 +1,27 @@
+Explore and document different reliability requirements (e.g Autoscaling, load Balancing, Cloud-based and Serverless deployments, fault-tolerance, recoverability, etc) 
+
+Metabase is used by tens of thousands of companies. It supports high availability via horizontal scaling, and it’s efficient out of the box:
+a single core machine with 4 Gb of RAM can scale Metabase to hundreds of users.
+1.load balancer:
+
+Load balancers direct traffic to multiple Metabase instances to ensure that each request gets the fastest response. If one instance of Metabase goes down temporarily, the load balancer will route requests to another available instance.
+
+2. Horizontal and Vertical Scaling
+Vertical scaling is much more of a brute force approach. Give metabase more cores and memory and metabase will work more efficiently. That said metabase is already an outstanding efficient system. 
+
+Horizontal scaling involves running multiple instances of Metabase in combination with a load balancer to direct traffic to the instances. Metabase is set up for horizontal scaling out of the box, so you don’t need any special configuration to run multiple instances of Metabase.
+
+The primary use case for horizontal scaling is to improve reliability (a.k.a. “high availability”), but horizontal scaling can also improve multi-user performance.
+When the load is balanced, a high-traffic, CPU-bound Metabase instance will perform better (faster) when some of its traffic is directed to other instances, as the CPU load will be distributed across multiple machines.
+Reference: https://www.metabase.com/learn/administration/metabase-at-scale#:~:text=Load%20balancers%20direct%20traffic%20to,balancer%20with%20Metabase%20is%20simple.
+
+Recoverability
+
+Disaster recovery and business continuity plan
+For distributing production operations over various availability zones, Metabase makes use of services made available by its hosting company. These decentralized zones guard Metabase’ s service against disconnection, infrastructure problems related to power, and other typical regional issues.
+If a site disaster strikes any of these sites, Metabase provides daily backups, replication for its core databases across these zones, and supports restore capability to safeguard the service's availability.
+Transactions are continuously preserved, and full backups are saved at least once each day.
+To ensure effective catastrophe recovery, Metabase annually tests its backup and restoration capabilities.
+Reference: https://www.metabase.com/security 
+
+

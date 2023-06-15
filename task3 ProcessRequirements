@@ -1,0 +1,38 @@
+Process requirements
+(e.g Versioning and release
+Management, Issue Life cycle management, Open-source contribution requirements
+for developers, review process, etc)
+
+Metabase gives both kinds of access to the developers who seek it's open source code
+
+https://github.com/metabase/metabase
+
+This repository contains the source code for both the Open Source edition of Metabase,
+released under the AGPL, as well as the commercial editions of Metabase, which are 
+released under the Metabase Commercial Software License.
+
+In case of Open-source contribution by requirements for developers, Metabase enables
+your application to:
+
+  Build moderation interfaces.
+  Export subsets of your users to third party marketing automation software.
+  Provide a custom customer lookup application for the people in your company.
+
+One can access both open source and commercial code for metabase to extend or mould metabase
+source into personal applications.
+
+Issue's Life cycle begins when a developer generates an issue based on his/her understanding 
+of a feature that should be added to metabase. This issue is then dealt as a task by other 
+developers and the completed (fix) issue is then merged to the main repository.
+
+reference:
+https://github.com/metabase/metabase/issues
+
+According to the metabase documentation, the review process is done by the Metabase Experts.
+Thes reviewers include professional with the github names "escherize", "metamben" and others.
+Public viewers can also review and suggest changes to the merge requests that are generated
+by the developers. Once the professional team approves the merge request, the code is merged
+to main and repository is updated and this merge request is marked approved.
+
+reference: 
+https://github.com/metabase/metabase/pulls 

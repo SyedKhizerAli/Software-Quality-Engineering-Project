@@ -1,0 +1,180 @@
+------------------------- SCD PROJECT REQUIREMENTS --------------------------------------------------------------------------------------------------------------------
+
+- Unit, UI and API test automation framework requirements
+- Modularity requirements
+- Performance Requirements
+- Security Requirements
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+          UI/ API/ Unit test automation reqiurements :
+
+
+-   Automation UI/API test cases shall be using Selenium and Cucumber.
+    
+-   Automation Unit test cases shall be written using JUnit in java.
+
+-   Unit tests should be handling 10 test cases per module.
+
+-   Test case execution reports must be generated after tests.
+
+-   Minimun test coverage shall be 98% in report.
+
+-   The UI tests shall be written in Gherkin language in feature file.
+    
+-   The tests shall be executed in order.
+    
+-   The test Code coverage must be 100%.
+    
+-   Code coverage must be checked using JaCoCo.
+    
+-   The test automation must is done using drivers.
+    
+             
+             Some other non-functional requirements include : 
+ 
+1. Test Reliability
+  
+  We need to make sure that our auto testing set-up is reliable, which means 
+  we need to make sure that we don’t have a real problem, and our tests should'nt
+  fail because of test configuration issues or incorrect handling of timeouts.
+  for instance, if a doctor is unable to add a patient, it should only be the case 
+  that th patient has invalid ID, it should be a code error or a test framework problem.
+  
+2. Accelerated Test Creation or API Usability
+
+  Using already existing API test and auto test template is important, It will save 
+  up alot of our time and help us in moving to the deployment phase quicker.
+  
+3. Accelerated Test Execution
+
+  Using frameworks can speed up the test execution by providing features to track delays
+  and enhanced finding and waiting of elements, and providing an improved browser life 
+  cycle control and the ability to run tests in headless mode.
+  
+4. Highly Extensible
+5. Human Readable
+6. Easy Knowledge Transfer
+7. Troubleshooting Easiness
+8. Unified Team Conventions
+9. Seamlessly Integration with Existing Tools and Processes
+10. Advanced Scenarios Support
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                   Modularity requirements :
+
+-   The code classes should contain separate java files.
+
+-   The source and test packages should be separate in folders.
+
+-   The test classes shall be separate in java files.
+   
+-   The GUI implementation shall be in separated java class files.
+
+-   The GUI files shall contain individual handlers for each action listener.
+    
+-   The database connectivity logic shall be in a separate module.
+    
+-   The database manipulation logic shall be in a separate module.
+    
+-   The business logic shall be in a individual java files.
+
+-   Each entity shall have own private class.
+
+-   Each user shall inherit from one abstract class to promot extensibility.
+    
+-   There shall be same packages for related classes.
+    
+-   Code shall be divided into the separate possible classes with no two classes in the file.
+
+                     Some other non-functional requirements include : 
+                     
+- Modular Decomposability
+- Modular Composability
+- Modular Understandability
+- Modular Continuity
+- Modular Protection
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        
+                        Security Requirements :
+
+-   The authentication of the user is a very important factor when it comes to the student management system. In this system, user authentication is to be done by using the login by entering the user name and password and classified by user type. Users will then get access to the system as permissions are then classified for that type of particular user. 
+
+-   Only authorized users can access the system with a username and password.
+
+-   The system will be completely secure
+
+- 	Nobody will be allowed to tamper with the data; Enhanced Security for sensitive data.
+
+-   When the user performs the action, authorize him/her to perform the actions allowed     for the user and display an error message that is found to be unauthorized.
+
+-   However, if the user performs an action, the message of an error should be displayed if the user is unauthorized. 
+
+-  	Data transfer is securely transferred over the internet by using 40 or 128-bit encryption and a secure sockets layer. 
+
+-   It makes secure online fees payment. It will integrate with highly secure payment gateways to pay the fees without the fear of losing money to hackers.
+    
+-   The application shall require encryption keys to access data stored in the cloud databases.
+    
+-   The application shall not allow other patients to view data of other patients.
+    
+-   The application shall not allow doctors to view details of other doctors
+    
+-   The application shall not nurses to view details of other nurses.
+    
+-   The application shall fail login for 10min after 5 wrong attemps.
+    
+-   The application shall require Captcha everytime.
+    
+-   The application shall log out the user after 5 minutes of inactivity on screen.
+
+
+1- Authentication and password management
+   
+   It is important for us to keep the confiditiality section of our customers
+   at high priority. A customer's password and authentication information should 
+   be protected in the databases with the best possible relational table set-up.
+   
+2- Authorization and role management
+  
+  Only the admin should be authorized to amend other user's information or the user
+  itself, since it is critical information and can lead to life or death situation. 
+
+3- Audit logging and analysis
+  
+  The logged data and information needs to be protected/secured in databases.
+
+4- Network and data security
+  
+  This factor is of least priority since at the beginning stage, our application will
+  only handle desktop based queries and not on the network. We do plan to extend our
+  application on a web host to make it available world wide.
+
+5- Code integrity and validation testing
+  
+  Test data categorization is important, to determine, what kind of data is important to
+  be tested and what is not, extra data will be filtered out so we can keep data security
+  and confidential information secure at the maximum level.
+  
+6- Data validation and sanitization
+
+  Test data should only be used once it is sanitized, the direct use of customer's confidential
+  data can lead to privacy outbrusts and no one should have the access to the information of the 
+  user expect the user itself.
+  
+7- Third party component analysis
+  
+  Well for now, we will not be integrating any web API's with our application but in future, the
+  factor of third party information handling will need to be controlled.
+ 
+ 
+ These factors are really important while considering security since if they are ignored,
+ the team can face :
+    
+    - Legal issues
+    - Customer Distrust
+    - Loss in revenues etc

@@ -1,0 +1,26 @@
+Security Requirements
+
+Metabase have followed Enterprise grade compliance 
+Which are
+1.	SOC 2 Type II
+Which attests that they have in place governing the security of customers 
+data as they map to Trust Service Principals.
+2.	General Data Protection Regulation
+At metabase all their products, processes and processes are GDPR-compliant.
+3.	California Consumer Privacy Act
+They provide services to the customers under the California Consumer Privacy Act
+
+
+
+They provide Endpoint Security
+All workstations are properly configured, updated and tracked and
+monitored by the Metabase endpoint management solutions. Metabase also logs, 
+monitors and audits all system calls and has alerting in pace to alert a potential intrusion or exfiltration Attempt
+
+Encryption
+•	Data in transit is encrypted using TLS 1.2 or higher while utilising Metabase, which encrypts data using industry-standard methods.
+•	Connection strings and other sensitive data are secured at the row level using AES256 + SHA512.
+AWS also encrypts the drives on which data is stored.
+
+•	Encryption keys for production services are managed with keys.
+Reference: https://www.metabase.com/security 

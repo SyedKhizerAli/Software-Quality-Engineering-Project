@@ -1,0 +1,55 @@
+Performance Requirements
+
+-   The application shall be in running state with elements loaded within 5 seconds.
+
+-   The application shall fetch records of all patients within 5 seconds.
+    
+-   The application shall fetch records of all nurses within 3 seconds.
+    
+-   The application shall fetch records of all doctors within 3 seconds.
+
+-   The application shall fetch records of all staff within 4 seconds.
+    
+-   The application maintain a cache storage for frequently accesed records.
+    
+-   The application shall use Lazy Loading for the unscrolled pane.
+    
+-   The application shall allow user to switch between menus within 2s.
+    
+-   The application shall handle scarsity of storage and memory space with loading messages.
+    
+-   The application shall be able catter 300 users at a single time.
+    
+-   The application shall add users in records within 2s.
+    
+-   The application shall load all new frames within 2s.
+
+
+                     Some other non-functional requirements include : 
+
+- Response Time
+- Workload
+- Scalability
+- Platform
+
+Process Requirements
+
+-	The team should update progress on Notion.
+
+-	The team shall upload their tasks on shared GitHub Repository.
+
+-	Team shall have weekly meetings.
+
+-	There should be one main branch and 3 separate branches to merge later.
+
+-	The risks and analysis team must update the manager when the risk of failure gets higher than 5%.
+
+-	Any changes in the schemas must be approved by the manager and then informed to the team.
+
+-	Any meetings with the instructor must be assigned atleast 5 hours prior to the time scheduled.
+
+-	The manager must have one to one meeting with each member to keep track of the progress
+
+-	After filtering the request, the manager should schedule the meeting with the instructor.
+
+-	If the risk of failure does not reduce after 3 working days, then under the instructor’s guidance best suitable version must be restored.

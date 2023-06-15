@@ -1,0 +1,155 @@
+                           DOCUMENTATION : METABASE
+
+-----------------------------------------------------------------------------------
+
+What is it basically?
+
+Metabase is an open-source business intelligence platform. You can use Metabase to 
+ask questions about your data, or embed Metabase in your app to let your customers 
+explore their data on their own.
+
+Some of it's tools :
+1- Databases : https://www.metabase.com/docs/latest/#databases
+2- Query builder
+3- SQL and native queries
+4- Sharing
+5- Dashboards : https://www.metabase.com/docs/latest/#dashboards
+6- DataModelling : https://www.metabase.com/docs/latest/#data-modeling
+7- Organisation : https://www.metabase.com/docs/latest/#organization
+8- Managing people : https://www.metabase.com/docs/latest/#people
+9- Permissions : https://www.metabase.com/docs/latest/#permissions
+10- Embedding : https://www.metabase.com/docs/latest/#embedding
+11- Api's : https://www.metabase.com/docs/latest/#metabase-api
+
+-------------------------------------------------------------------------------------
+
+Part -1 Architectural and Component level Modularity requirements 
+
+(e.g. Micro-services, Modular folder structure, class/components
+reusability, Linters for better code quality, etc)
+
+"Component-based architecture" focuses on the decomposition of the design 
+into individual functional or logical components that represent well-defined 
+communication interfaces containing methods, events, and properties. 
+
+In Metabase documentation and open source code I analyzed that there were separate 
+extendable components for each and every tool.
+
+For example: Metabase provides extendable modular components in their source code 
+so that a developer can easily add functionality to commit code or to create a 
+separate tool or create third party automated marketing softwares with the help 
+of abstraction.
+
+In another example it allows to integrate your personal analytics with your
+application using "QueryAPI" from JavaScript to:
+
+  1- Build moderation interfaces.
+  2- Export subsets of your users to third party marketing automation software.
+  3- Provide a custom customer lookup application for the people in your company.
+
+It provides a higher level of abstraction and divides the problem into sub-problems, 
+each associated with component partitions.
+
+The most important feature of component level modularity is it's "reusability".
+
+Secondly, a visible property of their code is "encapsulation". It depicts the 
+interfaces, which allow the caller to use its functionality, and do not expose 
+details of the internal processes or any internal variables or state.
+
+Moreover, another important property of Metabase's open code is "Standardizing". 
+Standardizing your code is a great way to move the conversation to a more productive 
+level. Having a guideline and running "LINTERS" against the codebase avoids aesthetical
+changes in your pull request, like replacing all tabs for spaces, indenting a variable 
+assignment, or even line breaks after a given number of characters. It also helps in 
+securing the product from potential bugs by using ESLint which is a javaScript tool.
+Security issues and potential bugs are also avoided by using "Linters".
+
+An example reference from the code is : 
+https://github.com/metabase/metabase/blob/master/.eslintignore
+https://github.com/metabase/metabase/blob/master/.eslintrc
+
+Maximizing meaningful changes takes your discussion to topics that matter, like 
+architectural decisions, security issues, or potential bugs.
+
+Lastly, let's talk about the "Micro-service" techniques used by Metabase. First thing 
+that comes to mind thinking about micro-services is the sheer granular modularity.
+This modularity and extensibility supports developer teams to coordinate alot better
+while making changes and extending the open source application. 
+The purpose of these services in Metabase is to help make integrating the units together,
+easier for the changers.
+
+The following article posted by a BI-Analyst discusses some downgrades that come with
+micro-servicing where unnecessary : 
+https://www.metabase.com/blog/microservices-considered-harmful
+
+This wraps my discussion about Architectural and Component level Modularity requirements 
+
+
+-------------------------------------------------------------------------------------
+
+Part - 2 Documentation needs 
+(e.g user manuals,
+installation/deployment document, development/extension documents, tutorials, etc)
+
+Metabase provides a strong section to handle their documentation needs. 
+It provides fully documented procedures, set-up steps and details about all it's components
+at : 
+https://www.metabase.com/docs/latest/index.html
+
+The documentation includes guide to installation and set-up of Metbase. It also contains
+the link to "localhost:3000" on which the installed application is run. The manual also has
+a detailed description of using metabase regarding; 
+
+    1- Creating Databases
+    2- Creating Queries
+    3- Creating groups
+    4- Admin operations
+    5- Managing people
+    6- Making groups
+    etc
+    
+Also includes your data connected, get started asking questions, creating dashboards, 
+and sharing your work. There's tutotials about : tools to simplify business intelligence,
+from embeddable charts and interactive dashboards, to GUI and SQL editors, to auditing 
+and data sandboxing. 
+
+Documentation provides detailed links to tutorials :
+
+https://www.metabase.com/docs/latest/index.html#installing-metabase
+https://www.metabase.com/docs/latest/index.html#setting-up-metabase
+https://www.metabase.com/docs/latest/index.html#getting-started
+https://www.metabase.com/docs/latest/index.html#a-tour-of-metabase
+
+Now, regarding the development and extension documents, metabase gives full access to
+it's source code repository on GitHub, it also links to a very detailed version of 
+developer's guide for them to extend, update and then integrate the code under the 
+following link :
+
+https://www.metabase.com/docs/latest/index.html#developers-guide
+
+Metabase help desk includes an option to get hold of their Expert developers If you 
+would like more technical resources to set up your data stack with Metabase, connect 
+with a Metabase Expert. Alog with that they have a blog, socials and regularly posting
+platforms like "community stories" and "metabase" to learn more about metabase.
+
+Furthermore, for some more tutorials they provide "trouble-shooting guidelines" in which 
+they provide sufficient amount of information to handle it's user common questions and
+queries.
+
+https://www.metabase.com/docs/latest/index.html#troubleshooting
+
+Metabase has offered full access to learn about their APIs in their documentation report.
+It contains details of all the APIs that they have used and what they are used for. This
+feature specially helped me alot to find out their APIs while API-testing in this project.
+The link is as follows :
+
+https://www.metabase.com/docs/latest/index.html#metabase-api
+
+It containes guidelines as well as tutorials to these APIs.
+
+To conclude this segment, metabase has also discussed Embedded Apps, tools, configuration
+and many other aspects in their documentation. I personally think it's a great practice to 
+provide such amount of detail in the documentation of an open-source application, since it
+helps a developer alot like myself.
+
+-------------------------------------------------------------------------------------

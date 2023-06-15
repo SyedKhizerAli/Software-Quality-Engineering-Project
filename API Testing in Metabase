@@ -1,0 +1,31 @@
+Metabase API only supports JSON. All responses are returned as JSON and request bodies are also JSON. They pass 'Content-Type: application/json' header with all of there requests. All of the examples that they provided used use the venerable command line utility, curl.
+Some endpoints also require that the user be an admin. In some places in our codebase we instead use the term superuser, but it means the same thing. Endpoints that require superuser status generally say so in their documentation and will return a 403 (Forbidden) if the current user doesn't have superuser status.
+It mostly uses java.jdbc, but also use MYSLQ Honey
+Toucan makes it easy to define custom behavior for inserting, retrieving, updating, and deleting objects on a model-by-model basis.
+
+
+(deftest deactivate-user-test
+  (testing "DELETE /api/user/:id"
+    (mt/with-temp User [user]
+      (is (= {:success true}
+             (mt/user-http-request :crowberto :delete 200 (format "user/%d" (:id user)) {})))
+
+      (testing "User should still exist, but be inactive"
+        (is (= {:is_active false}
+               (mt/derecordize (db/select-one [User :is_active] :id (:id user)))))))
+
+    (testing "Check that a non-superuser CANNOT update deactivate themselves"
+      (is (= "You don't have permissions to do that."
+             (mt/user-http-request :rasta :delete 403 (format "user/%d" (mt/user->id :rasta)) {}))))))
+
+in the following test case, they want to try and deactivate the user. in the first test, they are trying to delete the user with the id 200, if they fnd that user, it is deelted. in the next text , they want to check that the user must exist but be inactive. To do this they pick the user from the dataabase and see the is active status.In the third one, they want to check if a non-super user(non-admin) can deactivate themselves if they want to, (rasta trying to deactivate themself), they cannot do that.
+
+(deftest reset-password-permissions-test
+  (testing "PUT /api/user/:id/password"
+    (testing "Check that a non-superuser CANNOT update someone else's password"
+      (is (= "You don't have permissions to do that."
+             (mt/user-http-request :rasta :put 403 (format "user/%d/password" (mt/user->id :trashbird))
+                                   {:password     "whateverUP12!!"
+                                    :old_password "whatever"}))))))
+                                    
+In the following test case, they want to make sure that a non super user cannot update someone elses password. Here the non admin is rasta and he would be trying to update the password of the user trashbird. He does not have the permission to do that hence giving him the error that he cannot update the password

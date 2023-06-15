@@ -1,0 +1,49 @@
+Meeting 1:
+
+Task Division on google meet.
+Issues generated
+made separate files in personal repositories to be commited later in main
+-> Tasks divided on 2 per person ratio
+
+
+1 - Explore and document different architectural and component level modularity
+requirements (e.g. Micro-services, Modular folder structure, class/components
+reusability, Linters for better code quality, etc)
+2 - Explore and document different performance optimizations (e.g. Usage of Cache,
+Usage of Content Delivery Network, Usage of Lazy loading in web and asset
+workflows in games, Usage of PWA, Service workers and local storage)
+
+3 - Explore and document different security requirements (e.g. Secrets management,
+Application Firewalls, SAST, In-built security, security standard compliances, etc)
+4 - Explore and document different reliability requirements (e.g Autoscaling, load
+Balancing, Cloud-based and Serverless deployments, fault-tolerance, recoverability,
+etc)
+
+4 - Explore and document different process requirements (e.g Versioning and release
+Management, Issue Life cycle management, Open-source contribution requirements
+for developers, review process, etc)
+5 - Explore and document different documentation needs (e.g user manuals,
+installation/deployment document, development/extension documents, tutorials, etc)
+
+
+Meeting 2:
+
+-> Divided tasks as : 
+
+Khizer :
+- Unit, UI and API test automation framework requirements
+- Modularity requirements
+- Performance Requirements
+Naima:
+- Security Requirements
+- Reliability Requirements
+- Documentation Requirements
+Fatima:
+- Process Requirements + Project Description writing
+
+Task s Divided as 3, 3, 1 + description
+
+
+Side Notes: 
+
+Side discussions on metabase documentation, points research on google, length discussion of each point

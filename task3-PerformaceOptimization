@@ -1,0 +1,19 @@
+Explore and document different performance optimizations (e.g. Usage of Cache, Usage of Content Delivery Network, Usage of Lazy loading in web and asset workflows in games, Usage of PWA, Service workers and local storage):
+
+Metabase is very flexible for its Users. It has provided multiple alternating solutions to optimize the performance of metabase for its customers. They have provided a whole manual for optimization of their databases. Here are some examples:
+
+Cache your queries
+To avoid having to recalculate the answers to recent queries, you can configure caching to save the results. Users can manually refresh the results of the query if they want to run it again. Metabase will display the timestamp for the results. For results that do not change frequently, caching is appropriate. 
+
+Serve Metabase via HTTPS over HTTP/2
+Serving your Metabase instance via HTTPS over HTTP/2 can increase performance, since browsers on HTTP/1.1 can limit connections to approximately 6 concurrent connections per domain, whereas HTTP/2 is multiplexed on a single connection. More available connections won’t fix a slow database, or an overloaded Metabase instance that has run out of threads, but you’ll at least know that your browser isn’t throttling your connections.
+Keep your browser up to date
+Metabase is a web application and can benefit from the latest and greatest versions of browsers like Firefox, Chrome, Edge, and Safari.
+
+Supported deployments
+Ways to set up metabase:
+AWS Elastic Beanstalk: Check out our guide to setting up Metabase on Elastic Beanstalk. We use Elastic Beanstalk to host our internal Metabase application.
+Docker: See running Metabase on Docker.
+Google Cloud Platform, Microsoft Azure, Digital Ocean, Heroku, and other cloud providers offer other great alternatives for hosting your Metabase application.
+
+Reference: https://www.metabase.com/learn/administration/metabase-at-scale 
